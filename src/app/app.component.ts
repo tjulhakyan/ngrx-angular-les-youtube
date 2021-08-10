@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   counter = 0;
+  updateAt?: number;
 
   get cannotDecrease(): boolean{
     return this.counter<1;
@@ -14,14 +15,17 @@ export class AppComponent {
 
   increase(): void{
     this.counter++;
+    this.updateAt=Date.now();
   }
 
   decrease(): void{
     this.counter--;
+    this.updateAt=Date.now();
   }
 
   clear(): void{
     this.counter=0;
+    this.updateAt=Date.now();
   }
 }
 

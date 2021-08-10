@@ -3,3 +3,4 @@
 <button class="fz-60 m-20 p-50" [disabled]="cannotDecrease" (click)="clear()">=1</button>
 
 <p class="fz-60">Count = {{counter}}</p>
+<p *ngIf="updateAt" class="fz-60">Date of updated {{updateAt}}</p>
